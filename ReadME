@@ -2,16 +2,8 @@ How to Build
 
 kernel
 ======
-1. Get the prebuilt cross compiler from AOSP website:
-   $ git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6
+1. Get the prebuilt cross compiler:
+   https://android-build.linaro.org/builds/~linaro-android/toolchain-4.9-2014.04/
 
-2. Add required cross compiler to PATH:
-   $ export PATH=/YOUR_TOOLCHAIN_PATH/arm-eabi-4.6/bin:$PATH
-   $ export CROSS_COMPILE=arm-eabi-
-
-3. Copy the entire source code to this folder: 
-   $ cd $home/P6000
-
-4. Then use the following commands to build the kernel:
-   $ ./makeMtk k01q_e new k
+2. Run build_p6000.sh
 
