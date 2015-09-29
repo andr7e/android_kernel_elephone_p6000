@@ -107,8 +107,8 @@ extern unsigned char gtp_default_FW_fl[];
 #define GTP_POWER_CTRL_SLEEP  1       //turn off power on suspend
 #define GTP_AUTO_UPDATE       0      //update FW to TP FLASH
 #define GTP_CHANGE_X2Y        0				//set for se1
-#define GTP_HEADER_FW_UPDATE  1       // auto updated fw by gtp_default_FW in gt9xx_firmware.h, function together with GTP_AUTO_UDPATE
-#define GTP_AUTO_UPDATE_CFG   1       // auto update config by .cfg file, function together with GTP_AUTO_UPDATE
+#define GTP_HEADER_FW_UPDATE  0       // auto updated fw by gtp_default_FW in gt9xx_firmware.h, function together with GTP_AUTO_UDPATE
+#define GTP_AUTO_UPDATE_CFG   0       // auto update config by .cfg file, function together with GTP_AUTO_UPDATE
 
 #define GTP_SUPPORT_I2C_DMA   1       // if gt9xxf, better enable it if hardware platform supported
 #define GTP_COMPATIBLE_MODE   1       // compatible with GT9XXF
