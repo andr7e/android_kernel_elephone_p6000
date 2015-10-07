@@ -1490,10 +1490,10 @@ CUSTOM_KERNEL_LCM=hx8394d_hd720_dsi_vdo_tianma
 CUSTOM_UBOOT_LCM=hx8394d_hd720_dsi_vdo_tianma
 
 # To set LCM resolution height size
-LCM_HEIGHT=960
+LCM_HEIGHT=1280
 
 # To set LCM resolution width size
-LCM_WIDTH=540
+LCM_WIDTH=720
 
 # To control resource build. The value would be assigned to PRODUCT_LOCALES under build/target/product/XXX.mk (XXX is each project's name)
 MTK_PRODUCT_LOCALES=en_US es_ES zh_CN zh_TW ru_RU pt_BR fr_FR de_DE tr_TR it_IT in_ID ms_MY vi_VN ar_EG  th_TH  pt_PT   nl_NL el_GR hu_HU tl_PH ro_RO cs_CZ iw_IL my_MM km_KH ko_KR pl_PL es_US bg_BG hr_HR lv_LV lt_LT sk_SK uk_UA de_AT da_DK fi_FI ja_JP hi_IN fa_IR sr_RS 
