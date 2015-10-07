@@ -150,6 +150,7 @@ extern LCM_DRIVER cpt_claa101fp01_dsi_vdo_lcm_drv;
 extern LCM_DRIVER h070d_18dm_lcm_drv;
 extern LCM_DRIVER hx8394a_hd720_dsi_vdo_tianma_lcm_drv;
 extern LCM_DRIVER hx8394d_hd720_dsi_vdo_tianma_lcm_drv;
+extern LCM_DRIVER hx8394d_hd_cmi5p0_blj_trx_x5601_lcm_drv;
 extern LCM_DRIVER cpt_clap070wp03xg_sn65dsi83_lcm_drv;
 extern LCM_DRIVER nt35520_hd720_tm_lcm_drv;
 extern LCM_DRIVER nt35520_hd720_boe_lcm_drv;
@@ -226,6 +227,10 @@ LCM_DRIVER* lcm_driver_list[] =
 
 #if defined(HX8394D_HD720_DSI_VDO_TIANMA)
 	&hx8394d_hd720_dsi_vdo_tianma_lcm_drv,
+#endif
+
+#if defined(HX8394D_HD_CMI5P0_BLJ_TRX_X5601)
+		&hx8394d_hd_cmi5p0_blj_trx_x5601_lcm_drv,
 #endif
 
 #if defined(OTM1283A)
