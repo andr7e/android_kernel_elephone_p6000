@@ -54,8 +54,14 @@ repack_recovery()
 
    echo  "repacking $type..."
    dest_path="$source_path/build/recovery"
+
+   if [ ! -d "$dest_path" ]; then
+      mkdir "$dest_path"
+   fi
+
    cd $mtktools_path
    ./repack.pl -recovery "$projectKernelName" "recovery.img-ramdisk-$type" "$dest_path/recovery.img"
+
    cd $dest_path
    zip -r recovery .
    mv "$dest_path/recovery.zip" "$source_path/build/$projectName-$type-recovery.zip"
@@ -72,7 +78,9 @@ else
    if [ "$2" = "$recovery_param" ];
    then
        repack_recovery "$1" "twrp"
+       repack_recovery "$1" "philz"
    else
        build_kernel "$1"
+echo $2
    fi
 fi
