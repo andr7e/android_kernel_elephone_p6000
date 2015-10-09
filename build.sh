@@ -21,7 +21,25 @@ build_kernel()
 
    echo "$projectName";
   
-   ./makeMtk -o=TARGET_BUILD_VARIANT=user -t "$projectName" r k
+   #./makeMtk -o=TARGET_BUILD_VARIANT=user -t "$projectName" r k
+
+   projectKernelName="boot.img-kernel-$projectName.img"
+   projectDataName="$mtktools_path/$projectName"
+
+   cp "$source_path/out/target/product/"$projectName"/kernel_$projectName.bin" "$mtktools_path/$projectKernelName"
+
+   cd "$mtktools_path"
+   ./unpack.pl boot_stock.img
+   ./repack.pl -boot "$projectKernelName" boot_stock.img-ramdisk "$projectDataName/boot.img"
+
+   cd "$projectDataName"
+   zip -r out .
+
+   if [ ! -d "$source_path/build" ]; then
+      mkdir $source_path/build
+   fi
+
+   mv "$projectDataName/out.zip" "$source_path/build/$projectName-kernel_KK.zip"
 }
 
 repack_recovery()
