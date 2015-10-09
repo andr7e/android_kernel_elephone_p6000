@@ -21,7 +21,7 @@ build_kernel()
 
    echo "$projectName";
   
-   #./makeMtk -o=TARGET_BUILD_VARIANT=user -t "$projectName" r k
+   ./makeMtk -o=TARGET_BUILD_VARIANT=user -t "$projectName" r k
 
    projectKernelName="boot.img-kernel-$projectName.img"
    projectDataName="$mtktools_path/$projectName"
