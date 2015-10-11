@@ -60,12 +60,19 @@ repack_recovery()
    fi
 
    cd $mtktools_path
-   ./repack.pl -recovery "$projectKernelName" "recovery.img-ramdisk-$type" "$dest_path/recovery.img"
 
-   cd $dest_path
-   zip -r recovery .
-   mv "$dest_path/recovery.zip" "$source_path/build/$projectName-$type-recovery.zip"
-   rm "$dest_path/recovery.img"
+   if [ -f "$mtktools_path/recovery-$type.img" ]; then
+      ./unpack.pl "recovery-$type.img"
+      ./repack.pl -recovery "$projectKernelName" ramdisk/ "$dest_path/recovery.img"
+
+      cd $dest_path
+      zip -r recovery .
+      mv "$dest_path/recovery.zip" "$source_path/build/$projectName-$type-recovery.zip"
+      rm "$dest_path/recovery.img"
+   else
+      echo "File $mtktools_path/recovery-$type.img does not exist."
+   fi
+
 }
 
 recovery_param="recovery"
@@ -81,6 +88,5 @@ else
        repack_recovery "$1" "philz"
    else
        build_kernel "$1"
-echo $2
    fi
 fi
