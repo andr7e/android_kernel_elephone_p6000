@@ -183,7 +183,7 @@ CUSTOM_KERNEL_USB=mt6577
 CUSTOM_KERNEL_VIBRATOR=vibrator
 
 # To choose LK LCM driver name
-CUSTOM_LK_LCM=hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
+CUSTOM_LK_LCM=hx8394d_hd720_dsi_vdo #hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
 
 # Support customer to implement and apply their own RSA security functions
 CUSTOM_SEC_AUTH_SUPPORT=no
@@ -390,7 +390,7 @@ MTK_BQ24156_SUPPORT=no
 MTK_BQ24157_SUPPORT=no
 
 # BQ24158 charger support
-MTK_BQ24158_SUPPORT=no
+MTK_BQ24158_SUPPORT=yes
 MTK_BQ24160_SUPPORT=no
 MTK_BQ24261_SUPPORT=no
 MTK_BQ24296_SUPPORT=no
@@ -1484,10 +1484,10 @@ MTK_HDMI_SUPPORT=no#liliang.bao
 BOOT_LOGO=cu_hd720
 
 # To choose kernel LCM driver name
-CUSTOM_KERNEL_LCM=hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
+CUSTOM_KERNEL_LCM=hx8394d_hd720_dsi_vdo #hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
 
 # To choose uboot LCM driver name
-CUSTOM_UBOOT_LCM=hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
+CUSTOM_UBOOT_LCM=hx8394d_hd720_dsi_vdo #hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
 
 # To set LCM resolution height size
 LCM_HEIGHT=1280
