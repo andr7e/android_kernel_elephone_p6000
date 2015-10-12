@@ -85,11 +85,11 @@ CUSTOM_HAL_SUB_IMGSENSOR=  gc2235_mipi_raw gc2355_mipi_raw
 CUSTOM_HAL_SUB_LENS=dummy_lens
 
 # accelerometer sensor to detect accelerometer from x y z axis.
-CUSTOM_KERNEL_ACCELEROMETER=da213 bma222E-new
+CUSTOM_KERNEL_ACCELEROMETER=lis3de
 CUSTOM_KERNEL_ACTIVITY_SENSOR=
 
 # ALSPS sensor driverto detect ambint light and the object is close or far awary from device
-CUSTOM_KERNEL_ALSPS=ap3xx6_mtk
+CUSTOM_KERNEL_ALSPS=EPL2182
 
 # Pressure sensor driver to detect pressure
 CUSTOM_KERNEL_BAROMETER=

@@ -60,7 +60,7 @@
 /*----------------------------------------------------------------------------*/
 static const struct i2c_device_id lis3de_i2c_id[] = {{LIS3DE_DEV_NAME,0},{}};
 /*the adapter id will be available in customization*/
-static struct i2c_board_info __initdata i2c_LIS3DE={ I2C_BOARD_INFO("LIS3DE", (0x30>>1))};//0x50>>1
+static struct i2c_board_info __initdata i2c_LIS3DE={ I2C_BOARD_INFO("LIS3DE", (0x50>>1))};//0x30>>1
 
 //static unsigned short lis3de_force[] = {0x00, LIS3DE_I2C_SLAVE_ADDR, I2C_CLIENT_END, I2C_CLIENT_END};
 //static const unsigned short *const lis3de_forces[] = { lis3de_force, NULL };
