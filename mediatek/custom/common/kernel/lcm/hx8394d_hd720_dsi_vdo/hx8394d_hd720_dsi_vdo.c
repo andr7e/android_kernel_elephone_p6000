@@ -305,10 +305,18 @@ static void lcm_init(void)
 
 static void lcm_suspend(void)
 {
+	unsigned int data_array[16];
+
+	data_array[0] = 0x00280500; // Display Off
+	dsi_set_cmdq(data_array, 1, 1);
+	
+	data_array[0] = 0x00100500; // Sleep In
+	dsi_set_cmdq(data_array, 1, 1);
+	
 	SET_RESET_PIN(1);
     MDELAY(10);
     SET_RESET_PIN(0);
-    MDELAY(20);
+    MDELAY(10);
     SET_RESET_PIN(1);
     MDELAY(120);
 }
@@ -316,9 +324,7 @@ static void lcm_suspend(void)
 
 static void lcm_resume(void)
 {
-#ifndef BUILD_LK
 	lcm_init();
-#endif
 }
 
 
