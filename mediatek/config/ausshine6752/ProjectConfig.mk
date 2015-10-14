@@ -89,7 +89,7 @@ CUSTOM_KERNEL_ACCELEROMETER=lis3de
 CUSTOM_KERNEL_ACTIVITY_SENSOR=
 
 # ALSPS sensor driverto detect ambint light and the object is close or far awary from device
-CUSTOM_KERNEL_ALSPS=EPL2182
+CUSTOM_KERNEL_ALSPS=EPL2182-new
 
 # Pressure sensor driver to detect pressure
 CUSTOM_KERNEL_BAROMETER=
