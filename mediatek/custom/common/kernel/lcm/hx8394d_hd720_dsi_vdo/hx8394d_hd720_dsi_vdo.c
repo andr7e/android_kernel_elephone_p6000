@@ -105,12 +105,10 @@ static void init_lcm_registers(void)
     data_array[0] = 0x00043902;
     data_array[1] = 0x9483ffb9;
     dsi_set_cmdq(data_array, 2, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x00033902;
     data_array[1] = 0x008372ba; //0x008373ba;
     dsi_set_cmdq(data_array, 2, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x00103902;
     data_array[1] = 0x10106cb1; //0x0d0d6cb1;
@@ -118,14 +116,12 @@ static void init_lcm_registers(void)
     data_array[3] = 0x23543a81;
     data_array[4] = 0x58d2c080;
     dsi_set_cmdq(data_array, 5, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x000c3902;
     data_array[1] = 0x0e6400b2;
     data_array[2] = 0x081c220d;
     data_array[3] = 0x004d1c08;
     dsi_set_cmdq(data_array, 4, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x000d3902;
     data_array[1] = 0x51ff00b4;
@@ -133,17 +129,14 @@ static void init_lcm_registers(void)
     data_array[3] = 0x20600152; //0x2070015a;
     data_array[4] = 0x00000060; //0x00000070;
     dsi_set_cmdq(data_array, 5, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x00023902;
     data_array[1] = 0x000007bc;
     dsi_set_cmdq(data_array, 2, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x00043902;
     data_array[1] = 0x010e41bf;
     dsi_set_cmdq(data_array, 2, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x001f3902;
     data_array[1] = 0x000f00d3;
@@ -155,7 +148,6 @@ static void init_lcm_registers(void)
     data_array[7] = 0x4b0a0a44;
     data_array[8] = 0x00070710;
     dsi_set_cmdq(data_array, 9, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x002d3902;
     data_array[1] = 0x1b1a1ad5;
@@ -171,7 +163,6 @@ static void init_lcm_registers(void)
     data_array[11] = 0x18181821;
     data_array[12] = 0x00000018;
     dsi_set_cmdq(data_array, 13, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x002d3902;
     data_array[1] = 0x1b1a1ad6;
@@ -186,9 +177,7 @@ static void init_lcm_registers(void)
     data_array[10] = 0x25181818;
     data_array[11] = 0x18181824;
     data_array[12] = 0x00000018;
-    dsi_set_cmdq(data_array, 13, 1);
-    MDELAY(15);
-	
+    dsi_set_cmdq(data_array, 13, 1);	
 
     data_array[0] = 0x002b3902;
     data_array[1] = 0x100b00e0; //0x150e00e0;
@@ -204,35 +193,30 @@ static void init_lcm_registers(void)
     data_array[10] = 0x08131114; //0x0c131214;
     data_array[11] = 0x00161413; //0x001c1816;
     dsi_set_cmdq(data_array, 12, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x00023902;
     data_array[1] = 0x000009cc;
     dsi_set_cmdq(data_array, 2, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x00033902;
     data_array[1] = 0x001430c0;
     dsi_set_cmdq(data_array, 2, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x00053902;
     data_array[1] = 0x40c000c7;
     data_array[2] = 0x000000c0;
     dsi_set_cmdq(data_array, 3, 1);
-    MDELAY(15);
 	
     data_array[0] = 0x00033902;
     data_array[1] = 0x007070b6; //0x006a6ab6;
     dsi_set_cmdq(data_array, 2, 1);
 
-    MDELAY(15);
     data_array[0] = 0x00110500;
     dsi_set_cmdq(data_array, 1, 1);
-    MDELAY(120);
+    MDELAY(200);
     data_array[0] = 0x00290500;
     dsi_set_cmdq(data_array, 1, 1);
-    MDELAY(20);
+    MDELAY(10);
 }
 
 // ---------------------------------------------------------------------------
@@ -293,11 +277,11 @@ static void lcm_get_params(LCM_PARAMS *params)
 static void lcm_init(void)
 {
     SET_RESET_PIN(1);
-    MDELAY(20);
+    MDELAY(10);
     SET_RESET_PIN(0);
-    MDELAY(20);
+    MDELAY(10);
     SET_RESET_PIN(1);
-    MDELAY(150);
+    MDELAY(120);
 
 	init_lcm_registers();
 }
