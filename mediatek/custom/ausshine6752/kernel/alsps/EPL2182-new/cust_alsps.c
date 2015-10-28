@@ -13,6 +13,8 @@ static struct alsps_hw cust_alsps_hw = {
     .als_value  = {40, 40, 90,  90, 160, 160,  225,  320,  640,  1280,  1280,  2600,  2600, 2600,  10240, 10240},
     .ps_threshold_high = 4800,
     .ps_threshold_low = 4500,
+    .is_batch_supported_ps = true,
+    .is_batch_supported_als = true,
 };
 struct alsps_hw *get_cust_alsps_hw(void) {
     return &cust_alsps_hw;
