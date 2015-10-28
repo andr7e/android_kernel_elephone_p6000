@@ -125,19 +125,6 @@ PowerUp PowerOnList={
 				{RST,   Vol_High, 5}
 			},
 		},
-		{SENSOR_DRVNAME_OV8858R1A_MIPI_RAW,
-			{
-				{SensorMCLK,Vol_High, 0},
-				{AVDD,  Vol_2800, 5},
-				{DOVDD, Vol_1800, 5},
-				{DVDD,  Vol_1200, 5},
-				{AFVDD, Vol_2800, 5},
-				{PDN,   Vol_Low,  5},
-				{RST,   Vol_Low,  5},
-				{PDN,   Vol_High, 5},
-				{RST,   Vol_High, 5}
-			},
-		},
 			
 		{SENSOR_DRVNAME_IMX219_MIPI_RAW,
 			{

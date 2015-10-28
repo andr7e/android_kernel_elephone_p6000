@@ -55,7 +55,7 @@ CUSTOM_HAL_FLASHLIGHT=constant_flashlight
 CUSTOM_HAL_IMGSENSOR=ov5648_mipi_raw gc2355_mipi_raw
 
 # = CUSTOM_HAL_MAIN_LENS +CUSTOM_HAL_MAIN_BACKUP_LENS + CUSTOM_HAL_SUB_LENS + CUSTOM_HAL_SUB_BACKUP_LENS
-CUSTOM_HAL_LENS=dw9714af fm50af  dummy_lens
+CUSTOM_HAL_LENS=dw9714af dummy_lens
 CUSTOM_HAL_MAIN2_IMGSENSOR=
 CUSTOM_HAL_MAIN_BACKUP_IMGSENSOR=
 
@@ -66,7 +66,7 @@ CUSTOM_HAL_MAIN_BACKUP_LENS=
 CUSTOM_HAL_MAIN_IMGSENSOR=ov5648_mipi_raw
 
 # lens driver config for main camera
-CUSTOM_HAL_MAIN_LENS=dw9714af fm50af
+CUSTOM_HAL_MAIN_LENS=dw9714af
 
 # M-sensor hal layer library including daemon
 CUSTOM_HAL_MSENSORLIB=mmc328x akm8975 ami304 yamaha530 mag3110 akmd8963 bmm050 mc6420 mmc3416x s62xd lsm303md hscdtd006 qmc5983 akmd09911 mc64xx bmm056 mc41xx
@@ -131,7 +131,7 @@ CUSTOM_KERNEL_KPD=kpd
 CUSTOM_KERNEL_LEDS=mt65xx
 
 # same as CUSTOM_HAL_LENS
-CUSTOM_KERNEL_LENS=dw9714af fm50af  dummy_lens
+CUSTOM_KERNEL_LENS=dw9714af dummy_lens
 
 # compass driver to detect compass raw data and report orientatino data
 #CUSTOM_KERNEL_MAGNETOMETER=akm8963-new
@@ -148,7 +148,7 @@ CUSTOM_KERNEL_MAIN_BACKUP_LENS=
 CUSTOM_KERNEL_MAIN_IMGSENSOR=ov5648_mipi_raw
 
 # lens driver config for main camera
-CUSTOM_KERNEL_MAIN_LENS=dw9714af fm50af
+CUSTOM_KERNEL_MAIN_LENS=dw9714af
 CUSTOM_KERNEL_PEDOMETER=
 CUSTOM_KERNEL_PICK_UP_SENSOR=
 
