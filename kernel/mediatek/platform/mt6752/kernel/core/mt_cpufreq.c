@@ -959,15 +959,16 @@ static struct mt_cpu_freq_info opp_tbl_e1_1[] = {
 };
 
 /* CPU LEVEL 2, 1.5GHz segment */
+/*by Danil_e71  freq up to 1.7 GHz !TEST!*/
 static struct mt_cpu_freq_info opp_tbl_e1_2[] = {
-    OP(CPU_DVFS_FREQ4_2, 106250),   
-    OP(CPU_DVFS_FREQ5,   104375),
-    OP(CPU_DVFS_FREQ6,   101875),
-    OP(CPU_DVFS_FREQ7,   99375),
-    OP(CPU_DVFS_FREQ8,   93750),
-    OP(CPU_DVFS_FREQ9,   88750),
-    OP(CPU_DVFS_FREQ10,  83750),
-    OP(CPU_DVFS_FREQ10,  83750), 
+    OP(CPU_DVFS_FREQ2,  110000),
+    OP(CPU_DVFS_FREQ4,  107500),
+    OP(CPU_DVFS_FREQ5,  104375),
+    OP(CPU_DVFS_FREQ6,  101875),
+    OP(CPU_DVFS_FREQ7,  99375),
+    OP(CPU_DVFS_FREQ8,  93750),
+    OP(CPU_DVFS_FREQ9,  88750),
+    OP(CPU_DVFS_FREQ10, 83750),
 };
 
 /* CPU LEVEL 3, 1.3GHz segment */
