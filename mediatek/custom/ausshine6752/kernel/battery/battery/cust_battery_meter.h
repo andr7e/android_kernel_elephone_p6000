@@ -37,8 +37,8 @@
 #define FG_METER_RESISTANCE 	0
 
 /* Qmax for battery  */
-#define Q_MAX_POS_50	2688
-#define Q_MAX_POS_25	2688
+#define Q_MAX_POS_50	3567
+#define Q_MAX_POS_25	3567
 #define Q_MAX_POS_0		2451
 #define Q_MAX_NEG_10	2451
 
