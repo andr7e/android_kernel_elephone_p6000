@@ -183,7 +183,7 @@ CUSTOM_KERNEL_USB=mt6577
 CUSTOM_KERNEL_VIBRATOR=vibrator
 
 # To choose LK LCM driver name
-CUSTOM_LK_LCM=hx8394d_hd720_dsi_vdo #hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
+CUSTOM_LK_LCM=hx8394d_hd720_dsi_vdo
 
 # Support customer to implement and apply their own RSA security functions
 CUSTOM_SEC_AUTH_SUPPORT=no
@@ -192,10 +192,10 @@ CUSTOM_SEC_AUTH_SUPPORT=no
 CUSTOM_SEC_SIGNTOOL_SUPPORT=no
 
 # Add these variables to define the default input method and default input method languages.
-DEFAULT_INPUT_METHOD=com.cooted.smartinputv5.TouchPalIME
+DEFAULT_INPUT_METHOD=com.android.inputmethod.latin.LatinIME
 
 # Add these variables to define the default input method and default input method languages.
-DEFAULT_LATIN_IME_LANGUAGES=en-US fr ru
+DEFAULT_LATIN_IME_LANGUAGES=ru en_US
 
 # means what features support booting DFO.
 DFO_MISC=MD5_SIZE MD5_SMEM_SIZE MTK_MD5_SUPPORT MTK_ENABLE_MD5 MTK_ENABLE_MD1 MTK_ENABLE_MD2 MD1_SIZE MD2_SIZE MD1_SMEM_SIZE MD2_SMEM_SIZE MTK_MD1_SUPPORT MTK_MD2_SUPPORT LCM_FAKE_WIDTH LCM_FAKE_HEIGHT
@@ -338,7 +338,7 @@ MTK_AUDIO_BLOUD_CUSTOMPARAMETER_REV=MTK_AUDIO_BLOUD_CUSTOMPARAMETER_V5
 MTK_AUDIO_CHANGE_SUPPORT=no
 
 # support Dolby DD+ audio playback
-MTK_AUDIO_DDPLUS_SUPPORT=yes
+MTK_AUDIO_DDPLUS_SUPPORT=no
 MTK_AUDIO_EXTCODEC_SUPPORT=no
 MTK_AUDIO_GAIN_TABLE_SUPPORT=no
 MTK_AUDIO_HD_REC_SUPPORT=yes
@@ -434,7 +434,7 @@ MTK_BT_40_LE_STANDALONE=no
 
 # When this option set to yes, the Bluetooth stack will comply to Bluetooth Sepc 4.0 (Low Energy).
 MTK_BT_40_SUPPORT=yes
-MTK_BT_BLE_MANAGER_SUPPORT=no #modified by liliang.bao
+MTK_BT_BLE_MANAGER_SUPPORT=yes
 
 # Bluetooth chip type
 MTK_BT_CHIP=MTK_CONSYS_MT6752
@@ -456,7 +456,7 @@ MTK_CACHE_MERGE_SUPPORT=no
 MTK_CALENDAR_IMPORTER_APP=yes
 
 # Encode camcorder output file with MP4 encoder
-MTK_CAMCORDER_PROFILE_MID_MP4=no
+MTK_CAMCORDER_PROFILE_MID_MP4=yes
 
 # This option provides the build-time switch to determine which camera will be build in image(Two candidates: android default camera, Mediatek camera)
 MTK_CAMERA_APP=no
@@ -474,16 +474,13 @@ MTK_CAM_DEPTH_AF_SUPPORT=no
 MTK_CAM_EIS_SUPPORT=yes
 MTK_CAM_FACEBEAUTY_SUPPORT=yes
 MTK_CAM_FD_SUPPORT=yes
-#Turn off this feature, md by cz
-MTK_CAM_GESTURE_SUPPORT=no
+MTK_CAM_GESTURE_SUPPORT=yes
 MTK_CAM_HDR_SUPPORT=yes
 MTK_CAM_IMAGE_REFOCUS_SUPPORT=NONE
 MTK_CAM_LOMO_SUPPORT=yes
 MTK_CAM_MAV_SUPPORT=yes
-#Turn off this feature, md by cz
 MTK_CAM_MFB_SUPPORT=0
 MTK_CAM_MMSDK_SUPPORT=no
-#Disable this feature, md by cz
 MTK_CAM_NATIVE_PIP_SUPPORT=no
 MTK_CAM_NR3D_SUPPORT=yes
 MTK_CAM_OT_SUPPORT=yes
@@ -491,10 +488,10 @@ MTK_CAM_SD_SUPPORT=yes
 MTK_CAM_SINGLE_3DSHOT_SUPPORT=no
 MTK_CAM_STEREO_CAMERA_SUPPORT=no
 MTK_CAM_VHDR_SUPPORT=yes
-#Disable this feature, md by cz
 MTK_CAM_VIDEO_FACEBEAUTY_SUPPORT=no
 MTK_CAM_VSS_SUPPORT=yes
 MTK_CAM_ZSD_SUPPORT=yes
+MTK_CC33_SUPPORT=no
 MTK_CDS_EM_SUPPORT=yes
 MTK_CHIPTEST_INT=no
 
@@ -593,7 +590,7 @@ MTK_DM_ENTRY_DISPLAY=no
 MTK_DOCOMO_SUPPORT=no
 
 # support Dolby Audio Postprocessing
-MTK_DOLBY_DAP_SUPPORT=yes
+MTK_DOLBY_DAP_SUPPORT=no
 MTK_DP_FRAMEWORK=yes
 
 # Enable or disable the DRM1.0 feature this feature is implemented according to OMA DRM v1.0 specification, and is used for dealing with Digital Rights Management (DRM) if any media content provider require it.
@@ -660,6 +657,7 @@ MTK_EXTMD_NATIVE_DOWNLOAD_SUPPORT=no
 # Enable face beautify
 MTK_FACEBEAUTY_SUPPORT=yes
 MTK_FACTORY_MODE_IN_GB2312=yes
+MTK_FACTORY_RESET_PROTECTION_SUPPORT=no
 MTK_FAN5402_SUPPORT=no
 
 # use external charger IC, MTK support
@@ -748,7 +746,7 @@ MTK_HEADSET_ICON_SUPPORT=no
 # to enable high quality thumbnail. The thumbnail format retrieved by application  will be ARGB8888 instead of RGB565.
 MTK_HIGH_QUALITY_THUMBNAIL=yes
 MTK_HIGH_RESOLUTION_AUDIO_SUPPORT=yes
-MTK_HOTKNOT_SUPPORT=no #modified by liliang.bao
+MTK_HOTKNOT_SUPPORT=no
 MTK_HUIYOU_GAMEHALL_APP=no
 MTK_HUIYOU_LOVEFISHING_APP=no
 MTK_HUIYOU_SYJT_APP=no
@@ -846,7 +844,7 @@ MTK_M4U_SUPPORT=yes
 MTK_MAGICONFERENCE_SUPPORT=no
 
 # Let persist.sys.usb.config in default.prop as mass_storage.
-MTK_MASS_STORAGE=no
+MTK_MASS_STORAGE=yes
 
 # MTK_MATV_PARALLEL_IF_SUPPORT is used to define mATV video path interface is parallel interface or serial interface.
 MTK_MATV_SERIAL_IF_SUPPORT=no
@@ -907,7 +905,7 @@ MTK_MTKLOGGER_SUPPORT=yes
 # enable/disable ogm and mtkps playback feature
 MTK_MTKPS_PLAYBACK_SUPPORT=no
 MTK_MULTIBRIDGE_SUPPORT=no
-MTK_MULTICORE_OBSERVER_APP=no #modified by liliang.bao
+MTK_MULTICORE_OBSERVER_APP=yes
 
 # Use to set multi sim card ringtone/video call/sip call.
 MTK_MULTISIM_RINGTONE_SUPPORT=no
@@ -925,6 +923,7 @@ MTK_NAND_PAGE_SIZE=2K
 # Support using UBIFS rather than yaffs2 in NAND
 MTK_NAND_UBIFS_SUPPORT=no
 MTK_NATIVE_FENCE_SUPPORT=no
+MTK_NCP1854_SUPPORT=no
 
 # Control NEON HW support or not
 MTK_NEON_SUPPORT=yes
@@ -968,7 +967,7 @@ MTK_NFC_SE_NUM=7
 MTK_NFC_SUPPORT=no
 
 # Support Notpad feature
-MTK_NOTEBOOK_SUPPORT=no
+MTK_NOTEBOOK_SUPPORT=yes
 
 # remove LED ON when USB plug in.
 MTK_NO_NEED_USB_LED=no
@@ -1166,8 +1165,8 @@ MTK_SIM_HOT_SWAP_COMMON_SLOT=no
 
 # This feature option is to define if we support features for SIM Recovery
 MTK_SIM_RECOVERY=yes
-MTK_SIM_SWITCH=yes
-MTK_SIM_SWITCH_POLICY=1
+MTK_SIM_SWITCH=no
+MTK_SIM_SWITCH_POLICY=0
 
 # MTK_SINA_WEIBO_SUPPORT= "yes" means enable Sina weibo feature and "no" disable.
 MTK_SINA_WEIBO_SUPPORT=no
@@ -1281,6 +1280,7 @@ MTK_UMTS_TDD128_MODE=no
 
 # USB Audio Function Enable Flag
 MTK_USB_AUDIO_SUPPORT=yes
+MTK_USB_CBA_SUPPORT=no
 MTK_USER_ROOT_SWITCH=yes
 
 # use  to define the Video Max supported resolution, if MTK_USES_HD_VIDEO=yes, will support the 720P as the MAX video resolution. Else will support D1 as the MAX resolution
@@ -1344,11 +1344,11 @@ MTK_WEB_NOTIFICATION_SUPPORT=yes
 # Define MTK weekly number(internal use only)
 MTK_WEEK_NO= 
 MTK_WFD_HDCP_TX_SUPPORT=no
-MTK_WFD_SINK_SUPPORT=no #liliang.bao
-MTK_WFD_SINK_UIBC_SUPPORT=no #liliang.bao
+MTK_WFD_SINK_SUPPORT=yes
+MTK_WFD_SINK_UIBC_SUPPORT=yes
 
 # yes/no
-MTK_WFD_SUPPORT=no #liliang.bao
+MTK_WFD_SUPPORT=yes
 MTK_WIFIWPSP2P_NFC_SUPPORT=no
 
 # enable/disable WIFI calling API in RIL Layer
@@ -1424,7 +1424,7 @@ USE_OPENGL_RENDERER=true
 WIFI_WEP_KEY_ID_SET=no
 
 # Define which modem will be used.
-CUSTOM_MODEM=nb6752_lwt_kk_md1_k01q_a[lwg]
+CUSTOM_MODEM=nb6752_lwt_kk_md1_k01q_g[lwg]
 
 # Set the option to Yes to force to send SCRI message during the screen is on if the network doesn't support R8 Fast Dormancy.
 MTK_FD_FORCE_REL_SUPPORT=no
@@ -1456,13 +1456,13 @@ MTK_FM_SUPPORT=yes
 MTK_FM_TX_SUPPORT=no
 
 # Support GEMINI or not
-GEMINI=yes
+GEMINI=no
 
 # Enable or disable the GEMINI enhancement
-MTK_GEMINI_ENHANCEMENT=yes
+MTK_GEMINI_ENHANCEMENT=no
 
 # Extend our Gemini feature to support daul RIL with single modem logistic.
-MTK_SHARE_MODEM_CURRENT=2
+MTK_SHARE_MODEM_CURRENT=1
 
 # Capability of the underlay modem
 #  single or gemini
@@ -1475,19 +1475,19 @@ MTK_AGPS_APP=yes
 MTK_GPS_SUPPORT=yes
 
 # Specify HDMI external IC type.
-CUSTOM_KERNEL_HDMI=#liliang.bao
+CUSTOM_KERNEL_HDMI=
 
 # To control whether enable or disable HDMI feature. If choose yes,  phone's screen can be demonstrated on TV via HDMI cable.
-MTK_HDMI_SUPPORT=no#liliang.bao
+MTK_HDMI_SUPPORT=no
 
 # to choose which boot logo folder would be used, the boot logo folder path is mediatek/custom/common/uboot/logo/
 BOOT_LOGO=cu_hd720
 
 # To choose kernel LCM driver name
-CUSTOM_KERNEL_LCM=hx8394d_hd720_dsi_vdo #hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
+CUSTOM_KERNEL_LCM=hx8394d_hd720_dsi_vdo
 
 # To choose uboot LCM driver name
-CUSTOM_UBOOT_LCM=hx8394d_hd720_dsi_vdo #hx8394d_hd_cmi5p0_blj_trx_x5601 #hx8394d_hd720_dsi_vdo_tianma
+CUSTOM_UBOOT_LCM=hx8394d_hd720_dsi_vdo
 
 # To set LCM resolution height size
 LCM_HEIGHT=1280
@@ -1496,7 +1496,7 @@ LCM_HEIGHT=1280
 LCM_WIDTH=720
 
 # To control resource build. The value would be assigned to PRODUCT_LOCALES under build/target/product/XXX.mk (XXX is each project's name)
-MTK_PRODUCT_LOCALES=en_US es_ES zh_CN zh_TW ru_RU pt_BR fr_FR de_DE tr_TR it_IT in_ID ms_MY vi_VN ar_EG  th_TH  pt_PT   nl_NL el_GR hu_HU tl_PH ro_RO cs_CZ iw_IL my_MM km_KH ko_KR pl_PL es_US bg_BG hr_HR lv_LV lt_LT sk_SK uk_UA de_AT da_DK fi_FI ja_JP hi_IN fa_IR sr_RS 
+MTK_PRODUCT_LOCALES=ru_RU en_US cs_CZ da_DK de_AT de_CH de_DE el_GR en_AU en_GB es_ES es_US fi_FI fr_CH fr_FR hu_HU it_IT lt_LT lv_LV nl_NL nb_NO pl_PL pt_BR pt_PT sv_SE zh_CN zh_TW uk_UA
 
 # mATV feature control option which is used for swithing on/off mATV feature: switch on:  HAVE_MATV_FEATURE = yes switch off: HAVE_MATV_FEATURE = no
 HAVE_MATV_FEATURE=no
