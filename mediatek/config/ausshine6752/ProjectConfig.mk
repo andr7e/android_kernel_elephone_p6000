@@ -1424,7 +1424,7 @@ USE_OPENGL_RENDERER=true
 WIFI_WEP_KEY_ID_SET=no
 
 # Define which modem will be used.
-CUSTOM_MODEM=nb6752_lwt_kk_md1_k01q_g[lwg]
+CUSTOM_MODEM=ausshine6752_lwt_kk_md1[lwg]
 
 # Set the option to Yes to force to send SCRI message during the screen is on if the network doesn't support R8 Fast Dormancy.
 MTK_FD_FORCE_REL_SUPPORT=no
