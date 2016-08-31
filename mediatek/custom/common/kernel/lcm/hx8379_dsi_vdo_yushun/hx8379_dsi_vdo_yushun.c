@@ -417,9 +417,9 @@ static unsigned int lcm_compare_id(void)
 		if ( ! res )
 		{
 			printk("hx8379c get adc value = %d\r\n", volt);
-			if ( volt <= 199 )
+			if ( volt > 199 )
 			{
-				printk("it is TXD(hx8379c) lcm module\r\n");
+				printk("it is YuShun(hx8379c) lcm module\r\n");
 				result = 1;
 			}
 			else
@@ -570,9 +570,9 @@ static unsigned int lcm_esd_recover(void)
 }
 #endif
 
-LCM_DRIVER hx8379_dsi_vdo_lcm_drv = 
+LCM_DRIVER hx8379_dsi_vdo_yushun_lcm_drv = 
 {
-    .name			= "hx8379_dsi_vdo",
+    .name			= "hx8379_dsi_vdo_yushun",
 	.set_util_funcs = lcm_set_util_funcs,
 	.get_params     = lcm_get_params,
 	.init           = lcm_init,
