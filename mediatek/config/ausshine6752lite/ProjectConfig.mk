@@ -174,7 +174,7 @@ CUSTOM_KERNEL_SUB_IMGSENSOR= gc2355_mipi_raw
 CUSTOM_KERNEL_SUB_LENS=dummy_lens
 
 # touch driver  need to report correct touch axes
-CUSTOM_KERNEL_TOUCHPANEL=msg2138a_fwvga_v2lite
+CUSTOM_KERNEL_TOUCHPANEL=FT5436I msg2138a_fwvga_v2lite
 
 # Configuration for USB PHY
 CUSTOM_KERNEL_USB=mt6577
