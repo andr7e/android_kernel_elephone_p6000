@@ -105,10 +105,10 @@ HD    1280x720    2key ( (120,1350);(600,1350) )           3key  ( (120,1350);(3
 FHD   1920x1080  2key ( (160,2100);(920,2100) )           3key  ( (160,2100);(540,2100);(920,2100) )          4key   ( (160,2100);(320;1080);(600,1080);(920,2100)  )
 */
 #define TPD_HAVE_BUTTON									// if have virtual key,need define the MACRO
-#define TPD_BUTTON_HEIGH        				(100)  			//100
+#define TPD_BUTTON_HEIGH        				(40)  			//100
 #define TPD_KEY_COUNT           				3    				//  4
 #define TPD_KEYS                					{ KEY_MENU, KEY_HOMEPAGE, KEY_BACK}
-#define TPD_KEYS_DIM            	{{120,1350,120,TPD_BUTTON_HEIGH}, {360,1350,120,TPD_BUTTON_HEIGH}, {600,1350,120,TPD_BUTTON_HEIGH}}
+#define TPD_KEYS_DIM            	{{80,900,20,TPD_BUTTON_HEIGH}, {240,900,20,TPD_BUTTON_HEIGH}, {400,900,20,TPD_BUTTON_HEIGH}}
 
 /*********************Custom Define end*************************************************/
 

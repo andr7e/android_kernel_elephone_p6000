@@ -572,7 +572,7 @@ static unsigned int lcm_esd_recover(void)
 
 LCM_DRIVER hx8379_dsi_vdo_yushun_lcm_drv = 
 {
-    .name			= "hx8379_dsi_vdo_yushun",
+    .name			= "hx8379_dsi_yushun_vdo",
 	.set_util_funcs = lcm_set_util_funcs,
 	.get_params     = lcm_get_params,
 	.init           = lcm_init,
